@@ -1,0 +1,495 @@
+
+// See: https://sass-lang.com/
+
+
+body {
+  background-color: #eee;
+  h1 {
+    color: black;
+    font-family: "Fredoka One", cursive;
+    font-size: 40px;
+    text-align: center;
+padding-top: 5%;
+    div {
+      font-size: 25px;
+      text-align: center;
+      padding-left: 30%;
+    }
+  }
+
+
+  #normalmaps {
+    margin-top:1em;
+    font-size: 32px;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+  }
+  .form-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .form-check-input {
+      position: relative;
+    }
+  }
+  .mapCollection {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+
+    height: 1200px;
+    float: left;
+    .mapCollection > p {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-weight: bold;
+      width: 100%;
+    }
+    #favoritemap {
+      display: none;
+      height: 25%;
+    }
+    #foodymap {
+      display: none;
+      height: 25%;
+    }
+    #campingmap {
+      display: none;
+      height: 25%;
+    }
+    #weddingmap {
+      display: none;
+      height: 25%;
+    }
+  }
+  .mapCollection > img:hover {
+    cursor: grab;
+  }
+}
+.mapCollection > img:hover {
+  cursor: grab;
+}
+
+#map {
+  height: 95%;
+  width: 96%;
+  margin: 2%;
+
+  .searchPlace {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  #search-input {
+    width: 50%;
+    height: 5%;
+  }
+
+  .searchPlace {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  #search-input {
+    width: 50%;
+    height: 5%;
+  }
+
+  #searchPlace {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+
+#mapV2 {
+  height: 75%;
+  width: 96%;
+  margin: 2%;
+
+  .searchPlace {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  #search-input {
+    width: 50%;
+    height: 5%;
+  }
+
+  .searchPlace {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  #search-input {
+    width: 50%;
+    height: 5%;
+  }
+
+  #searchPlace {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+
+.fa-search-location {
+  margin-left: 1em;
+}
+
+// #login-form {
+//   margin: 5em;
+//   display: none;
+// }
+// #singup {
+//   margin: 5em;
+//   display: none;
+// }
+nav .search {
+  margin-left: 3em;
+}
+
+nav #buttons {
+  margin-right: 3em;
+}
+
+#user {
+  .loginpage {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em;
+    #left {
+      width: 30%;
+
+      height: 600px;
+    }
+    #right {
+      width: 65%;
+
+      height: 600px;
+    }
+  }
+  #personal-page {
+    // background-color: red;
+    h1 {
+      margin: 2em 0 0 2em;
+    }
+    #left {
+      margin: 3em 0 0 3em;
+    }
+  }
+}
+
+#homepage {
+  #login-form {
+    margin: 3em;
+    display: none;
+  }
+  #singup {
+    margin: 3em;
+    display: none;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 6em;
+  }
+  #create-map {
+    margin: 1em 0;
+  }
+}
+.ui.error.message {
+  width: 80%;
+  margin: 0 auto;
+}
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 320px;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -320px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom-color: #eeeeee;
+  background-color: #fafafa;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+
+.demo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-demo:focus {
+  outline: 0;
+}
+
+.mapsContainer {
+  margin-top: 5px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  a {
+    margin: 5px;
+  }
+  img {
+    padding-top: 5px;
+  }
+}
+.rowContainer {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 1em;
+  a {
+    margin: 2em;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 5px;
+  flex: 1;
+}
+
+
+
+#mapdescription {
+  font-size: 32px;
+}
+#mapdescription {
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  font-size: 32px;
+}
+
+
+
+#showmap-buttons {
+  text-align: center;
+  margin: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  }
+
+
+
+  #showmap-buttons {
+    text-align: center;
+    margin: 3em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .rowContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 1em;
+    a {
+      margin: 2em;
+    }
+   }
+
+#createMap {
+  visibility: visible;
+  position: absolute;;
+  bottom: 90px;
+  right:0;
+  left: 0;
+  z-index: 1030;
+}
+
+#modalbutton {
+  position: relative;
+  font-size: 12pt;
+  bottom: 100%;
+  box-shadow: 0px 1px 3px 0px black;
+}
+
+// img {
+//   box-shadow:4px 9px 2px 0px #bbbaba;
+// }
+
+#favContainer {
+
+  font-family: "Fredoka One", cursive;
+  width: 90%;
+  margin:0 auto;
+  text-align: center;
+  font-size: 32px;
+
+}
+.favorites {
+  padding-top: 1em;
+  height: 350px;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+  .favSlides {
+    visibility: hidden;
+  .anchormap {
+    border: 0;
+  }
+  }
+
+  // /* Next & previous buttons */
+  .next {
+    cursor: pointer;
+    position: absolute;
+    z-index:1000;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color:white;
+    background-color: black;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .next:hover{
+    background-color: burlywood
+  }
+  .prev {
+    cursor: pointer;
+    position: absolute;
+    z-index:1000;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color:white;
+    background-color: black;
+  }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover{
+    background-color: burlywood
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+}
+
+.earth {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 5%;
+  left:20%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.earth:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px rgb(27, 32, 32) inset;
+  border-radius: 30%;
+}
+
+.earth > div {
+  width: 200%;
+  height: 110%;
+  animation: spin 10s linear alternate infinite;
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+  background-size: cover;
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+#arrow {
+  font-size:40px;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  text-align: right;
+  opacity: 0.6;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mapdia</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" /> 
+  <!-- SEMANTIC UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" />
+  <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+
+
+  <!-- JS -->
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <!-- <script type="text/javascript" src="/routes/logins.js"></script> -->
+
+  <!-- change type from "text/jsvascript" to "module" client code helpers function module-->
+
+  <script type="module" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/rendermaps.js"></script>
+
+</head>
+
+<body id="homepage">
+    <h1>
+        Mapdia <br>
+        <div>- Way to see the world</div>
+</h1>
+  <header>
+    <nav>
+      <div class="search">
+        <form action="/search" method="POST" class="form-inline md-form form-sm active-cyan-2 mt-2">
+          <div class="ui input">
+            <input id="searchtext" type="text" name="searchtext" placeholder="Search..." />
+          </div>
+          <i class="fas fa-search-location"></i>
+          <button id="searchbutton" class="ui basic button">Search</button>
+        </form>
+      </div>
+      <%if(!user) {%>
+      <div id="buttons ">
+        <button class="ui basic button login">Login</button>
+        <button class="ui basic button signup">Sign up</button>
+        <%} else {%>
+        <form action="/logout" method="POST">
+          <h5>
+            <div id="logout">Welcome Back! <%=name%>
+          </h5>
+
+          <div id="create-map">
+
+            <a href="/newmap" class="ui basic button">Create Map</a>
+          </div>
+
+          <button class="ui basic button logout">Logout</button>
+
+      </div>
+      </form>
+      <%}%>
+      </div>
+
+    </nav>
+  </header>
+  <main>
+    <%if(error) {%>
+      <div class="ui error message">
+        <i class="close icon"></i>
+        <div class="header">
+          There were some errors with your email or password
+        </div>
+        <ul class="list">
+          <li>Please check your email or password again</li>
+        </ul>
+      </div>
+      <%}%>
+    <div id="login-form" class="mainform">
+      <form class="ui form" action="/login" method="POST">
+        <div class="field">
+          <label>Email</label>
+          <input type="text" name="email" placeholder="Email" />
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Password" />
+        </div>
+
+        <button class="ui basic button" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="singup">
+      <form class="ui form" action='/registration' method="POST">
+        <div class="field">
+          <label>Email</label>
+          <input type="text" name="email" placeholder="Email" />
+        </div>
+        <div class="field">
+          <label>password</label>
+          <input type="password" name="password" placeholder="Password" />
+        </div>
+
+        <button class="ui button" type="submit">Submit</button>
+
+      </form>
+    </div>
+    <%if(user) {%>
+    <div id='favContainer'>Favorite Maps
+        <div class="favorites">
+            <div class="favSlides fade" id ="favSlides">
+              </div>
+                <!-- Next and previous buttons -->
+        <a class="prev" >&#10094;</a>
+        <a class="next">&#10095;</a>
+        </div>
+        </div>
+        <%} %>
+    <div id="normalmaps">All Maps
+        <div  class="mapsContainer">
+          <div class="rowContainer">
+          </div>
+          </div>
+        </div>
+  </main>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div >
+  <a  id="arrow" href="#"><i class="fas fa-angle-double-up"></i></a>
+</div>
+<script type="text/javascript" src="/scripts/slides.js"></script>
+<script type="text.jsvascript" src="/scripts/composer.js"></script>
+
+<div class="earth">
+    <div></div>
+  </div>
+</body>
+
+</body>
+</html>

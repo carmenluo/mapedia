@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+  <!-- SEMANTIC UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" />
+
+  <!-- JS -->
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+
+  <!-- change type from "text/jsvascript" to "module" client code helpers function module-->
+
+  <script type="module" src="/scripts/app.js"></script>
+</head>
+
+<body id="user">
+  <header>
+    <nav>
+      <div class="search">
+        <div class="ui input">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <i class="fas fa-search-location"></i>
+      </div>
+      <form id="logout" action="/logout" method="POST">
+        <div id="buttons">
+          <button class="ui basic button">Logout</button>
+        </div>
+      </form>
+    </nav>
+    <main>
+      <div id="personal-page">
+        <h1>personal page</h1>
+        <div class="loginpage">
+          <div id="left">
+            <div class="ui link list">
+              <a class="item" href="collections">Collections</a>
+              <a class="item" href="map">MAPS</a>
+            </div>
+          </div>
+
+          <section id="map">
+            <div>
+              <script type="text/javascript" src="/scripts/map.js"></script>
+              <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZImsQ1Qw68YIf_tHVOoMhs5wz5-F4JHA&libraries=places&callback=initMap">
+                </script>
+            </div>
+          </section>
+          <form id="map_submission" method="POST" action="/pinsCollection">
+            <button>Submit Pins</button>
+          </form>
+        </div>
+      </div>
+      </main>
+      </div>
+    </main>
+  </header>
+</body>
+
+</html>
